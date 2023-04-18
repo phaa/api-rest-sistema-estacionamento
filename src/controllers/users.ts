@@ -3,7 +3,7 @@ import { RequestHandler } from "express";
 import { Users } from "../models/users";
 
 export const createUser: RequestHandler = async (req, res, next) => {
-  var todos = await Users.create({ ...req.body });
+  const todos = await Users.create({ ...req.body });
   return res
     .status(200)
     .json({ message: "Usuário criado com sucesso", data: todos });
