@@ -5,15 +5,15 @@ import { Table, Model, Column, DataType } from "sequelize-typescript";
   tableName: "users",
 })
 export class Users extends Model {
-  @Column({
+  /**@Column({
     type: DataType.UUID,
     defaultValue: DataType.UUIDV4,
     allowNull: false,
   })
-  user_id!: number;
+  user_id!: number; */
 
   @Column({
-    type: DataType.STRING(300),
+    type: DataType.STRING(255),
     allowNull: false,
   })
   name!: string;
